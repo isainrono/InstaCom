@@ -1,0 +1,27 @@
+
+
+<StackLayout orientation="vertical">
+
+    <button text="MOSTRAR INFO" (tap)="getImagesListAPI()"></button>
+
+    <ScrollView>
+        <stacklayout>
+            <stacklayout *ngFor="let glasses of images; index as i" orientation="horizontal">
+                <stacklayout>
+                    <label text="id: {{glasses.id}}"></label>
+                    <label text="Name: {{glasses.name}}"></label>
+                    <label text="Color: {{glasses.color}}"></label>
+                    <label text="Price: {{glasses.price}}"></label>
+                    <label text="Image: {{glasses.imagen}}"></label>
+                </stacklayout>
+            </stacklayout>
+        </stacklayout>
+    </ScrollView>
+    
+            
+</StackLayout>
+
+
+
+
+

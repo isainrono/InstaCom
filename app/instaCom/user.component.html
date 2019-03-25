@@ -1,0 +1,15 @@
+<StackLayout orientation="vertical">
+    
+    <label text="Nombre"></label>
+    <TextField hint="Enter text"  [(ngModel)]="name"></TextField>
+
+    <label text="Apellido"></label>
+    <TextField hint="Enter text" [(ngModel)]="pass"></TextField>
+    
+    <button text="VALIDAR" (tap)="showInformation()"></button>
+    <button text="PEDIR TOKEN" (tap)="sendPut()"></button>
+    <button text="ENVIAR TOKEN" (tap)="sendToken()"></button>
+    <button text="MOSTRAR LISTA DE FOTOS" [nsRouterLink]="['/instacom']"></button>
+
+            
+</StackLayout>
