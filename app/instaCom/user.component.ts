@@ -38,9 +38,11 @@ export class UserComponent{
     }
 
     sendToken() {
-        console.log(appSettings.getString("token"));
-        this._userService.postDadesAjax2(appSettings.getString("token"))
-        .subscribe(res=>{
+        //console.log(appSettings.getString("token"));
+   //     this._userService.postDadesAjax2(appSettings.getString("token") )
+   this._userService.postDadesAjax2({"b":"a"} )
+   
+   .subscribe(res=>{
             console.log(res);
         });
     }

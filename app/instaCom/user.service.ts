@@ -21,7 +21,7 @@ export class UserService {
 
     postDadesAjax2(dadesJSON) {
         return this.http.post("http://326spain.com/instaCom/sendToken.php", dadesJSON,
-                            {headers: this.createRequestHeader()});
+                            {headers: this.generateHeaders()});
 
         }
     
@@ -36,9 +36,10 @@ export class UserService {
 
     generateHeaders() {
         if (appSettings.getString("token") ) {
-            return { headers: new HttpHeaders({ 'Content-Type': 'application/json',
-            'Authorization': appSettings.getString("token") }) };
+            console.log("genero cabecera con token:"+appSettings.getString("token"));
+            return  new HttpHeaders({ 'Content-Type': 'application/json',
+            'Authorization': appSettings.getString("token") }) ;
             } else {
-            return { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }; }    
+            return  new HttpHeaders({ 'Content-Type': 'application/json' }) };    
     }
 }
